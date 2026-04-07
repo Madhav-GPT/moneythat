@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>moneythat</title>
+    <title>MoneyThat - Crypto Dashboard</title>
     <link rel="stylesheet" href="ui.css">
 </head>
+
 <body>
+    <header>
+        <h1>MoneyThat</h1>
+        <p>A simple, real-time cryptocurrency tracker.</p>
+    </header>
 
-    <h1>moneythat</h1>
+    <main>
+        <section class="summary-section">
+            <div class="summary-card">
+                <h3>Total Coins Loaded</h3>
+                <p id="total-coins">0</p>
+            </div>
+            <div class="summary-card">
+                <h3>Top Coin</h3>
+                <p id="top-coin-name">Loading...</p>
+            </div>
+        </section>
 
-    <div id="loading">Loading data...</div>
+        <section class="controls">
+            <input type="text" id="search-input" placeholder="Search by name (e.g., Bitcoin)...">
+            <select id="sort-select">
+                <option value="market_cap_desc">Market Cap (High to Low)</option>
+                <option value="price_desc">Price (High to Low)</option>
+                <option value="price_asc">Price (Low to High)</option>
+                <option value="name_asc">Name (A - Z)</option>
+            </select>
+        </section>
 
-    <div id="container"></div>
+        <section class="data-display">
+            <div id="loading-message">Fetching real-time data from CoinGecko...</div>
+            <div id="error-message" class="hidden">Failed to load data. Please try again later.</div>
+
+            <div id="crypto-grid" class="grid-container hidden">
+            </div>
+        </section>
+    </main>
 
     <script src="app.js"></script>
 </body>
+
 </html>

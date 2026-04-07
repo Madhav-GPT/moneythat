@@ -1,17 +1,21 @@
-# moneythat
+# MoneyThat
 
 ## Project Description
 
-moneythat is a simple web application that allows users to explore real-time cryptocurrency data in an easy and clear way. The idea behind the project is to keep things minimal and understandable, so users can quickly see basic information about different cryptocurrencies without using complicated platforms.
+MoneyThat is a clean, real-time cryptocurrency dashboard that allows users to quickly explore the crypto market. The philosophy behind the project is to keep things minimal and intuitive, providing users with the essential information about different cryptocurrencies without the clutter of complicated trading platforms.
 
-The application uses the CoinGecko API to fetch live data and displays it in a simple card layout. Each cryptocurrency is shown with its name, image, and current price, making it easy to scan through the list.
+Powered by the CoinGecko API, the application fetches live market data—including prices, market capitalization, and 24-hour price changes—and displays it all in a responsive, easy-to-read grid.
 
-## Basic Functioning
+## Features & Functionality
 
-When the application loads, it makes a request to the CoinGecko API and retrieves a list of cryptocurrencies along with their details. While the data is being fetched, a loading message is displayed to indicate that the content is being loaded.
+When you open MoneyThat, the dashboard automatically pulls the top 50 cryptocurrencies by market cap. A clear loading message is displayed during the fetch, with an error handler checking for network issues.
 
-Once the data is received, it is dynamically rendered on the webpage using JavaScript. Each item is displayed as a small card containing basic information like the coin name, its image, and its current price.
+Key features include:
+- **Live Summary**: A quick overview showing the total number of coins tracked and the current top coin on the market.
+- **Search & Filter**: Find your favorite coins instantly by typing their name or ticker symbol in the interactive search bar.
+- **Sorting Options**: Sort the market data exactly how you want it—by Market Cap (highest to lowest), Price (high to low, or low to high), or Alphabetically by name.
+- **Interactive Crypto Cards**: Each asset is displayed as a sleek card showing its logo, name, symbol, current USD price, and its 24-hour percentage change. The 24h change is color-coded (green for positive, red for negative) to give you an immediate sense of market performance.
 
-The layout is designed to adjust across different screen sizes, so the application works on mobile, tablet, and desktop devices without any major issues.
+## Design
 
-At this stage, the project mainly focuses on fetching and displaying real-time data, along with handling loading states and maintaining a simple responsive design. More interactive features like search, filtering, and sorting will be added in the next stages.
+The UI has a modern, airy aesthetic with clean typography, smooth hover animations on the market cards, and a fully responsive grid system. The layout naturally adjusts to ensure the dashboard feels polished and usable whether you are checking prices on a mobile phone or analyzing the market on a desktop monitor.

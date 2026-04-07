@@ -1,32 +1,148 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
     padding: 20px;
+}
+
+header {
     text-align: center;
+    margin-bottom: 30px;
 }
 
-h1 {
-    margin-bottom: 20px;
+header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
 }
 
-#loading {
-    font-size: 18px;
-    margin-bottom: 20px;
+header p {
+    color: #7f8c8d;
+    margin-top: 5px;
 }
 
-#container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.summary-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 150px;
+    border: 1px solid #e0e0e0;
+}
+
+.summary-card h3 {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.summary-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2980b9;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
     gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+input,
+select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    min-width: 250px;
+}
+
+#loading-message,
+#error-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2980b9;
+    margin-top: 20px;
+}
+
+#error-message {
+    color: #c0392b;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
-    border: 1px solid #ccc;
-    padding: 15px;
+    background-color: white;
+    padding: 20px;
     border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #2980b9;
 }
 
 .card img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.card .symbol {
+    text-transform: uppercase;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.card .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin: 10px 0;
+}
+
+.card .change {
+    font-size: 0.9rem;
+}
+
+.change.positive {
+    color: #27ae60;
+}
+
+.change.negative {
+    color: #c0392b;
 }
