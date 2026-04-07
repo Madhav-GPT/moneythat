@@ -4,7 +4,7 @@
 
 MoneyThat is a clean, real-time cryptocurrency dashboard that allows users to quickly explore the crypto market. The philosophy behind the project is to keep things minimal and intuitive, providing users with the essential information about different cryptocurrencies without the clutter of complicated trading platforms.
 
-Powered by the CoinGecko API, the application fetches live market data—including prices, market capitalization, and 24-hour price changes—and displays it all in a responsive, easy-to-read grid.
+Powered by the CoinGecko API, the application fetches live market data—including prices, market capitalization, and 24-hour price changes and displays it all in a responsive, easy-to-read grid.
 
 ## Features & Functionality
 
