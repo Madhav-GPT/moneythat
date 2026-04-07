@@ -13,9 +13,9 @@ When you open MoneyThat, the dashboard automatically pulls the top 50 cryptocurr
 Key features include:
 - **Live Summary**: A quick overview showing the total number of coins tracked and the current top coin on the market.
 - **Search & Filter**: Find your favorite coins instantly by typing their name or ticker symbol in the interactive search bar.
-- **Sorting Options**: Sort the market data exactly how you want it—by Market Cap (highest to lowest), Price (high to low, or low to high), or Alphabetically by name.
+- **Sorting Options**: Sort the market data exactly how you want it, by Market Cap (highest to lowest), Price (high to low, or low to high), or Alphabetically by name.
 - **Interactive Crypto Cards**: Each asset is displayed as a sleek card showing its logo, name, symbol, current USD price, and its 24-hour percentage change. The 24h change is color-coded (green for positive, red for negative) to give you an immediate sense of market performance.
 
 ## Design
 
-The UI has a modern, airy aesthetic with clean typography, smooth hover animations on the market cards, and a fully responsive grid system. The layout naturally adjusts to ensure the dashboard feels polished and usable whether you are checking prices on a mobile phone or analyzing the market on a desktop monitor.
+The UI has a modern, airy aesthetic with clean typography, smooth hover animations on the market cards, and a fully responsive grid system. The layout naturally adjusts to ensure the dashboard feels polished and usable, whether you are checking prices on a mobile phone or analyzing the market on a desktop monitor.
