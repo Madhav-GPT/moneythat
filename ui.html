@@ -5,46 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoneyThat - Crypto Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="ui.css">
 </head>
 
 <body>
-    <header>
-        <h1>MoneyThat</h1>
-        <p>A simple, real-time cryptocurrency tracker.</p>
-    </header>
+    <div class="dashboard-container">
+        <main class="main-content">
+            <header class="top-header">
+                <div class="logo">
+                    <h2>MoneyThat</h2>
+                </div>
+                <div class="header-controls">
+                    <div class="search-bar glass">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="search-input" placeholder="Search tokens (e.g. Bitcoin, ETH)...">
+                    </div>
+                    <div class="header-actions">
+                        <select id="sort-select" class="glass">
+                            <option value="market_cap_desc">Market Cap (High to Low)</option>
+                            <option value="volume_desc">Volume (High to Low)</option>
+                            <option value="price_desc">Price (High to Low)</option>
+                            <option value="price_asc">Price (Low to High)</option>
+                            <option value="name_asc">Name (A - Z)</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
 
-    <main>
-        <section class="summary-section">
-            <div class="summary-card">
-                <h3>Total Coins Loaded</h3>
-                <p id="total-coins">0</p>
-            </div>
-            <div class="summary-card">
-                <h3>Top Coin</h3>
-                <p id="top-coin-name">Loading...</p>
-            </div>
-        </section>
+            <section class="stats-highlight-section">
+                <div class="stats-header-title">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="var(--accent-blue)" stroke-width="2"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <h3>Global Market Overview</h3>
+                </div>
+                <div class="overview-stats">
+                    <div class="stat-card glass glow-blue">
+                        <p class="stat-label">Global Market Cap (Top 50)</p>
+                        <h3 class="stat-value" id="global-mcap">Loading...</h3>
+                    </div>
+                    <div class="stat-card glass glow-purple">
+                        <p class="stat-label">24h Volume (Top 50)</p>
+                        <h3 class="stat-value" id="global-volume">Loading...</h3>
+                    </div>
+                    <div class="stat-card glass glow-green">
+                        <p class="stat-label">Top Gainer</p>
+                        <h3 class="stat-value" id="top-gainer">Loading...</h3>
+                    </div>
+                    <div class="stat-card glass glow-cyan">
+                        <p class="stat-label">Total Coins Tracked</p>
+                        <h3 class="stat-value" id="total-coins">0</h3>
+                    </div>
+                </div>
+            </section>
 
-        <section class="controls">
-            <input type="text" id="search-input" placeholder="Search by name (e.g., Bitcoin)...">
-            <select id="sort-select">
-                <option value="market_cap_desc">Market Cap (High to Low)</option>
-                <option value="price_desc">Price (High to Low)</option>
-                <option value="price_asc">Price (Low to High)</option>
-                <option value="name_asc">Name (A - Z)</option>
-            </select>
-        </section>
+            <section class="data-display">
+                <div id="loading-message">
+                    <div class="spinner"></div>
+                    <p>Syncing Real-Time Market Data...</p>
+                </div>
+                <div id="error-message" class="hidden">
+                    <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2" fill="none">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <p>Lost connection to Oracle. Please try reloading.</p>
+                </div>
 
-        <section class="data-display">
-            <div id="loading-message">Fetching real-time data from CoinGecko...</div>
-            <div id="error-message" class="hidden">Failed to load data. Please try again later.</div>
-
-            <div id="crypto-grid" class="grid-container hidden">
-            </div>
-        </section>
-    </main>
-
+                <div id="crypto-grid" class="grid-container hidden">
+                </div>
+            </section>
+        </main>
+    </div>
     <script src="app.js"></script>
 </body>
 
